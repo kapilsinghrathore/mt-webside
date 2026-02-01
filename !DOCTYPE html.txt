@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase.in - Buy Products Online</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background-color: #333; color: white; text-align: center; padding: 20px; }
+        .product { max-width: 600px; margin: 20px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .product img { width: 100%; height: auto; }
+        .price { font-size: 24px; color: #e74c3c; font-weight: bold; }
+        button { background-color: #28a745; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 18px; }
+        button:hover { background-color: #218838; }
+        footer { text-align: center; padding: 10px; background: #333; color: white; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to ShopEase.in</h1>
+        <p>Your go-to place for amazing products!</p>
+    </header>
+
+    <div class="product">
+        <h2>Sample Product: Wireless Headphones</h2>
+        <img src="https://via.placeholder.com/400x300?text=Headphones" alt="Wireless Headphones"> <!-- Replace with your product image URL -->
+        <p>Description: High-quality wireless headphones with noise cancellation. Perfect for music lovers.</p>
+        <p class="price">Price: ₹1,500</p>
+        <button id="buyBtn">Buy Now</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 ShopEase.in. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple JavaScript for button click (replace with real payment integration)
+        document.getElementById('buyBtn').addEventListener('click', function() {
+            alert('Purchase simulated! In a real site, this would redirect to payment.');
+            // For real payments, integrate Razorpay here (see below)
+        });
+    </script>
+</body>
+</html>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+    document.getElementById('buyBtn').addEventListener('click', function() {
+        var options = {
+            key: 'YOUR_RAZORPAY_KEY_ID', // Replace with your key
+            amount: 150000, // ₹1,500 in paise (100 paise = ₹1)
+            currency: 'INR',
+            name: 'ShopEase.in',
+            description: 'Purchase Wireless Headphones',
+            handler: function(response) {
+                alert('Payment successful! ID: ' + response.razorpay_payment_id);
+                // Send to your server for order processing
+            }
+        };
+        var rzp = new Razorpay(options);
+        rzp.open();
+    });
+</script>
