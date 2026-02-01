@@ -2,122 +2,106 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Indian Wear Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopEase | Premium Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
         body {
-            background: #f4f6f9;
-            color: #333;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
         }
 
         header {
-            background: linear-gradient(135deg, #4f46e5, #3b82f6);
+            background: #111;
             color: white;
-            padding: 60px 20px;
+            padding: 20px;
             text-align: center;
         }
 
-        header h1 {
-            font-size: 40px;
-        }
-
-        header p {
-            margin-top: 10px;
-            font-size: 18px;
-        }
-
-        .btn {
-            margin-top: 20px;
-            display: inline-block;
-            padding: 12px 25px;
-            background: white;
-            color: #3b82f6;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 40px 20px;
-        }
-
-        .features {
+        .products {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
+            padding: 20px;
         }
 
         .card {
             background: white;
-            padding: 25px;
-            border-radius: 12px;
+            border-radius: 10px;
+            overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: 0.3s;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
         }
 
         .card h3 {
-            color: #3b82f6;
-            margin-bottom: 10px;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .price {
+            color: green;
+            font-size: 18px;
+            padding: 0 10px;
+        }
+
+        .btn {
+            display: block;
+            margin: 10px;
+            padding: 10px;
+            background: black;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
         }
 
         footer {
+            text-align: center;
+            padding: 15px;
             background: #111;
             color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-
-        footer span {
-            color: #3b82f6;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>ShopEase</h1>
-    <p>Premium Online Shopping Experience</p>
-    <a href="#" class="btn">Explore Now</a>
+    <h1>Indian Clothing Store</h1>
+    <p>Premium T-Shirts & Hoodies</p>
 </header>
 
-<div class="container">
-    <h2 style="text-align:center; margin-bottom:30px;">Why Choose Us?</h2>
+<div class="products">
 
-    <div class="features">
-        <div class="card">
-            <h3>Fast Delivery</h3>
-            <p>Get your products delivered quickly and safely.</p>
-        </div>
-
-        <div class="card">
-            <h3>Premium Quality</h3>
-            <p>We provide best quality products at best price.</p>
-        </div>
-
-        <div class="card">
-            <h3>Secure Payment</h3>
-            <p>100% safe & secure payment system.</p>
-        </div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf" />
+        <h3>Printed T-Shirt</h3>
+        <p class="price">₹499</p>
+        <a href="#" class="btn">Buy Now</a>
     </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1618354691260-3f7eeb88f2b8" />
+        <h3>Black Hoodie</h3>
+        <p class="price">₹899</p>
+        <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" />
+        <h3>Casual T-Shirt</h3>
+        <p class="price">₹599</p>
+        <a href="#" class="btn">Buy Now</a>
+    </div>
+
 </div>
 
 <footer>
-    <p>© 2026 <span>ShopEase</span> | Designed by Kapil</p>
+    © 2026 Indian Wear | All Rights Reserved
 </footer>
 
 </body>
