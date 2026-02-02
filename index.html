@@ -1,107 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Indian Wear Store</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-        }
+<meta charset="UTF-8">
+<title>IndianWear | Premium Clothing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        header {
-            background: #111;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+<style>
+:root{
+  --primary:#111;
+  --accent:#ff4d00;
+  --bg:#f5f5f5;
+}
 
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial, sans-serif}
 
-        .card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
+body{background:var(--bg);color:#222}
 
-        .card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
+header{
+  background:linear-gradient(135deg,#000,#333);
+  color:#fff;
+  padding:60px 20px;
+  text-align:center;
+}
+header h1{font-size:38px}
+header p{margin-top:10px;font-size:18px;color:#ddd}
 
-        .card h3 {
-            padding: 10px;
-            margin: 0;
-        }
+.container{max-width:1200px;margin:auto;padding:30px 15px}
 
-        .price {
-            color: green;
-            font-size: 18px;
-            padding: 0 10px;
-        }
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:25px;
+}
 
-        .btn {
-            display: block;
-            margin: 10px;
-            padding: 10px;
-            background: black;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-        }
+.card{
+  background:#fff;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,.1);
+  transition:.3s;
+}
+.card:hover{transform:translateY(-6px)}
 
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #111;
-            color: white;
-        }
-    </style>
+.card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+}
+
+.card h3{padding:12px;font-size:18px}
+.price{padding:0 12px;font-size:18px;color:green;font-weight:bold}
+
+.actions{
+  display:flex;
+  gap:10px;
+  padding:12px;
+}
+.actions a{
+  flex:1;
+  text-align:center;
+  padding:10px;
+  border-radius:6px;
+  text-decoration:none;
+  color:#fff;
+  font-size:14px;
+}
+.buy{background:var(--accent)}
+.whatsapp{background:#25D366}
+
+.payment{
+  background:#fff;
+  margin-top:50px;
+  border-radius:14px;
+  padding:30px;
+  box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+.payment h2{text-align:center;margin-bottom:20px}
+
+.payment ul{line-height:1.8}
+
+footer{
+  background:#111;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+  margin-top:50px;
+  font-size:14px;
+}
+
+@media(max-width:600px){
+  header h1{font-size:28px}
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>Indian Clothing Store</h1>
-    <p>Premium T-Shirts & Hoodies</p>
+  <h1>IndianWear</h1>
+  <p>Premium T-Shirts, Hoodies & Streetwear</p>
 </header>
+
+<div class="container">
 
 <div class="products">
 
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf" />
-        <h3>Printed T-Shirt</h3>
-        <p class="price">₹499</p>
-        <a href="#" class="btn">Buy Now</a>
-    </div>
+<!-- PRODUCT 1 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+<h3>Classic Printed T-Shirt</h3>
+<div class="price">₹499</div>
+<div class="actions">
+<a class="buy" href="#">Buy</a>
+<a class="whatsapp" href="https://wa.me/919977041793">WhatsApp</a>
+</div>
+</div>
 
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1618354691260-3f7eeb88f2b8" />
-        <h3>Black Hoodie</h3>
-        <p class="price">₹899</p>
-        <a href="#" class="btn">Buy Now</a>
-    </div>
+<!-- PRODUCT 2 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1618354691260-3f7eeb88f2b8">
+<h3>Premium Black Hoodie</h3>
+<div class="price">₹999</div>
+<div class="actions">
+<a class="buy" href="#">Buy</a>
+<a class="whatsapp" href="https://wa.me/919977041793">WhatsApp</a>
+</div>
+</div>
 
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" />
-        <h3>Casual T-Shirt</h3>
-        <p class="price">₹599</p>
-        <a href="#" class="btn">Buy Now</a>
-    </div>
+<!-- PRODUCT 3 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf">
+<h3>Streetwear Oversize Tee</h3>
+<div class="price">₹699</div>
+<div class="actions">
+<a class="buy" href="#">Buy</a>
+<a class="whatsapp" href="https://wa.me/919977041793">WhatsApp</a>
+</div>
+</div>
+
+</div>
+
+<!-- PAYMENT SECTION -->
+<div class="payment">
+<h2>Indian Payment Options 🇮🇳</h2>
+<ul>
+<li>✔ UPI (PhonePe / Google Pay / Paytm)</li>
+<li>✔ Direct WhatsApp Order</li>
+<li>✔ Cash on Delivery (future option)</li>
+</ul>
+<p style="margin-top:15px;color:#555">
+👉 Abhi “Buy” ya “WhatsApp” button se order lo.  
+Baad me payment gateway (Razorpay / Stripe) easily add ho jayega.
+</p>
+</div>
 
 </div>
 
 <footer>
-    © 2026 Indian Wear | All Rights Reserved
+© 2026 IndianWear | Designed by Kapil
 </footer>
 
 </body>
